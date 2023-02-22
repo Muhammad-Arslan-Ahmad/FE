@@ -1,0 +1,1 @@
+We have a business objective to ${_playBusinessOutcome}.  We’re running a play called ${_playName} to achieve that objective.  We’ll run this play from ${_playStart}  to ${_playEnd}, where we’ll target ${_playRoles}  to help them see how our  ${_playProductCategory} help through our ${_playProductNames} We will win because ${_playWinThemes}.

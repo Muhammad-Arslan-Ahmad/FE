@@ -1,0 +1,64 @@
+package com.salesfuse.client.product.model;
+
+
+import com.salesfuse.client.common.payload.ServiceResponse;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.FieldDefaults;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class GetProductResponse extends ServiceResponse implements Serializable {
+
+    String id;
+    String name;
+    byte[] attachment;
+    String fileName;
+    String contentType;
+    List<String> productFeatures;
+    boolean productFeatureAltitude;
+    String productNameSelected;
+    String productCategorySelected;
+    List<String> productBenefits;
+    boolean productBenefitAdvantage;
+    List<String> productCapabilities;
+    boolean productCapabilityHighlight;
+    List<String> productRisks;
+    List<String> proofNames;
+    Date createdAt;
+    String status;
+
+    public GetProductResponse(boolean status, String message) {
+        super(status, message);
+    }
+
+    public GetProductResponse(Product product) {
+        super();
+        if (product != null) {
+            this.id = product.getId();
+            this.name = product.getName();
+            this.attachment = product.getAttachment();
+            this.fileName = product.getFileName();
+            this.contentType = product.getContentType();
+            this.productFeatures = product.getProductFeatures();
+            this.productFeatureAltitude = product.isProductFeatureAltitude();
+            this.productNameSelected = product.getProductNameSelected();
+            this.productCategorySelected = product.getProductCategorySelected();
+            this.productBenefits = product.getProductBenefits();
+            this.productBenefitAdvantage = product.isProductBenefitAdvantage();
+            this.productCapabilities = product.getProductCapabilities();
+            this.productCapabilityHighlight = product.isProductCapabilityHighlight();
+            this.productRisks = product.getProductRisks();
+            this.proofNames = product.getProofNames();
+            this.status = product.getStatus();
+        }
+    }
+}

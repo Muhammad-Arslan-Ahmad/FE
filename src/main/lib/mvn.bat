@@ -1,0 +1,3 @@
+call mvn install:install-file -Dfile=D:\Work\RCMS\rcms_afis_client\src\main\lib\jet-1.0.1.jar -DgroupId=com.jet -DartifactId=com.jet -Dversion=1.0.2 -Dpackaging=jar
+call mvn install:install-file -Dfile=D:\Work\RCMS\rcms_afis_client\src\main\lib\identity-module-1.0-SNAPSHOT.jar -DgroupId=com.iom.idm -DartifactId=com.iom.idm -Dversion=1.0-SNAPSHOT -Dpackaging=jar
+call mvn install:install-file -Dfile=D:\Work\RCMS\rcms_afis_client\src\main\lib\jnbis-2.0.3-SNAPSHOT.jar -DgroupId=jnbis -DartifactId=jnbis -Dversion=2.0.3-SNAPSHOT -Dpackaging=jar
